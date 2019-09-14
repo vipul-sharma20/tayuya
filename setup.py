@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="tayuya",
-    version="0.0.3",
+    version="0.0.4",
     author="Vipul Sharma",
     author_email="vipul.sharma20@gmail.com",
     description="MIDI to guitar tabs generator",
