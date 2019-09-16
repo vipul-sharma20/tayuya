@@ -1,8 +1,6 @@
 # Tayuya
 
-A tool to generate guitar tabs from MIDI files
-
-Live demo: [midi.vipul.xyz](http://midi.vipul.xyz)
+Python library to generate guitar tabs from MIDI files
 
 # Installation
 
