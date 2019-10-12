@@ -1,6 +1,5 @@
-from typing import List, Dict, Iterator, Tuple
+from typing import List, Dict, Iterator
 
-import mido
 from mido import MidiFile
 from music21 import note as musicnote
 from music21 import stream, analysis, pitch
