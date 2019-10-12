@@ -116,7 +116,7 @@ Here's a brief of how it works:
   chords is not done yet.
 * Works only for standard tuning (E A D G B E)
 
-# TODO
+# Todo
 
 - [ ] Render tabs using Lilypond or some GUI alternative
 - [ ] Implement logic to determine and render chords
@@ -125,7 +125,7 @@ Here's a brief of how it works:
 - [ ] Add way to handle non standard tuning
 - [ ] More stringed instruments
 
-# LICENSE
+# License
 
 [MIT](https://github.com/vipul-sharma20/tayuya/blob/master/)
 
