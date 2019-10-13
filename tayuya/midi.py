@@ -128,7 +128,8 @@ class MIDIParser:
         return filter(
             lambda x: x.type == constants.NOTE_ON, self.midi_data)
 
-    def _midi_to_note(self, midi_note: int) -> str:
+    @staticmethod
+    def _midi_to_note(midi_note: int) -> str:
         """
         Convert MIDI note to music note
 
