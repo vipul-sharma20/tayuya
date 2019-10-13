@@ -140,7 +140,7 @@ class Tabs:
         staff_length = kwargs.get('staff_length', constants.MAX_RENDER_COLUMNS)
         fretboard = ['' for _ in range(constants.GUITAR_STRING)]
 
-        for note, note_string, note_fret in notes_list:
+        for _, note_string, note_fret in notes_list:
             idx_note_string = int(note_string) - 1
 
             # If fretboard string's length is greater than the current note's
