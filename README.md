@@ -4,17 +4,20 @@ Python library to generate guitar tabs from MIDI files
 
 # Installation
 
-`pip install tayuya`
+```bash
+# Install globaly
+$ pip install tayuya
+
+# Install only for the current user
+$ pip install --user tayuya
+```
 
 # Usage
 
 ```python
-In [1]: from tayuya import MIDIParser
-
-In [2]: mid = MIDIParser('sample.mid', track=0)
-
-In [3]: mid.render_tabs()
-Out[3]:
+>>> from tayuya import MIDIParser
+>>> mid = MIDIParser('sample.mid', track=0)
+>>> print(mid.render_tabs())
 ```
 ```
 E-------------14--------------------------16--14----------14--------------
@@ -30,13 +33,9 @@ E-------------------------------------------------------------------------
 ### Get track numbers of all the tracks in the MIDI file
 
 ```python
-
-In [1]: from tayuya import MIDIParser
-
-In [2]: mid = MIDIParser('sample.mid', track=0)
-
-In [3]: mid.get_tracks()
-Out[3]:
+>>> from tayuya import MIDIParser
+>>> mid = MIDIParser('sample.mid', track=0)
+>>> mid.get_tracks()
 {0: 'Lead Guitar',
  1: 'Rhthym Guitar Dist',
  2: 'Acoustic Guitar',
@@ -52,10 +51,8 @@ Out[3]:
 ### Get all notes played in the MIDI track
 
 ```python
-In [1]: mid = MIDIParser('sample.mid', track=0)
-
-In [2]: mid.notes_played()
-Out[2]:
+>>> mid = MIDIParser('sample.mid', track=0)
+>>> mid.notes_played()
 [{'note': 'C#5', 'time': 18},
  {'note': 'C#5', 'time': 30},
  {'note': 'B4', 'time': 26},
@@ -68,9 +65,8 @@ Out[2]:
 ### Get key of the track
 
 ```python
-In [1]: mid = MIDIParser('sample.mid', track=0)
-
-In [2]: mid.get_key()
+>>> mid = MIDIParser('sample.mid', track=0)
+>>> mid.get_key()
 ```
 
 ## Tabs
@@ -81,12 +77,9 @@ You can use this example to generate all the notes to play with their string
 and fret positions.
 
 ```python
-In [1]: mid = MIDIParser('sample.mid', track=0)
-
-In [2]: tabs = Tabs(notes=mid.notes_played(), key=mid.get_key())
-
-In [3]: tabs.generate_notes(tabs.find_start())
-Out[3]:
+>>> mid = MIDIParser('sample.mid', track=0)
+>>> tabs = Tabs(notes=mid.notes_played(), key=mid.get_key())
+>>> tabs.generate_notes(tabs.find_start())
 [('C#3', 5, 4),
  ('G#3', 4, 6),
  ('C#4', 3, 6),
