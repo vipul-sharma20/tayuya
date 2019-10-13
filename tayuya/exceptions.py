@@ -7,6 +7,7 @@ class TrackError(Exception):
     """
     def __init__(self):
         self.msg = constants.TRACK_ERROR_MESSAGE
+        super().__init__()
 
     def __str__(self):
         return repr(self.msg)
